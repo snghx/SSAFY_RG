@@ -5,8 +5,8 @@ T = int(input())
 for tc in range(1, T+1):
     list_a = list(map(int, input().split()))
 
-    list_temp = [i for i in list_a if i % 2 == 1]
-    ans = sum(list_temp)
+    list_temp = [i for i in list_a if i % 2 == 1]  # 홀수인 것만 새로운 리스트에 담기
+    ans = sum(list_temp)  # 홀수만 담긴 리스트의 합을 구한다
 
     print(f'#{tc} {ans}')
 

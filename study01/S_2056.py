@@ -20,6 +20,8 @@ for tc in range(1, T+1):
 
 
 
+
+
 ''' 방법2: 달 특징마다 if문
 T = int(input())
 
@@ -44,9 +46,7 @@ for test_case in range(1, T + 1):
             else: print('#{} -1'.format(test_case))
  
     else:
-        print('#{} -1'.format(test_case))
-              
-                   
+        print('#{} -1'.format(test_case))           
 '''
 
 
