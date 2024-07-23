@@ -1,11 +1,12 @@
 # 중앙값
 # 다시 생각해보기
+# 왜 안될까... 자고일어나서 다시 생각하기...
 
 
 T = int(input())
 
-for test_case in range(1, T + 1):
-    lst = list(map(int, input().split()))
-    num = int(test_case // T) + 1
-    result = lst[num]
+lst = list(map(int, input().split()))
+lst.sort()
+num = int(T // 2)
+result = lst[num]
 print(result)
