@@ -10,3 +10,4 @@ for tc in range(1, T+1):
         else:
             result += tc_1
     print(f'#{tc} {result}')
+
