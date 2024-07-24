@@ -21,3 +21,4 @@ for tc in range(1, T+1):
             e += 1
             NUM = NUM / 11
     print(f'#{tc}', a, b, c, d, e)
+    
