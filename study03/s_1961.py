@@ -21,5 +21,9 @@ for t in range(1, T+1):
     arr180 = rotate(arr90, n)
     arr270 = rotate(arr180, n)
 
-    total = zip(arr90, arr180, arr270)
-    print("".join(map(str, *total)))
+    print(f"#{t}")
+    for i in range(n):
+        line_90 = ''.join(map(str, arr90[i]))
+        line_180 = ''.join(map(str, arr180[i]))
+        line_270 = ''.join(map(str, arr270[i]))
+        print(f'{line_90} {line_180} {line_270}')
