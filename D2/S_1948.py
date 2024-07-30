@@ -1,28 +1,23 @@
-# 날짜 계산기
-# 월 일로 이루어진 날짜를 2개 입력 받아
-# 두 번째 날짜가 첫 번째 날짜의 며칠째인지 출력하는 프로그램을 작성하라.
 
 
-# 같은 달이면 날짜만 빼고
-# 다른 달이면 전달 막날 - 주어진 날짜 + 다음달 주어진 날짜
+T = int(input())
 
-# 월 - 일 딕셔너리
+mth_day = {1:31, 2:28, 3:31, 4:30, 5:31, 6:30, 7:31, 8:31, 9:30, 10:31, 11:30, 12:31}
 
-month_day = { 1 : 31, 2 : 28, 3 : 31, 4 : 30, 5 : 31, 6 : 30, 7 : 31, 8: 31, 9:30, 10:31, 11:30, 12:31}
+for tc in range (1, T+1): # 주어진 TC만큼 돌아간다.
+    lst = list(map(int,input().split()))
+    m1 = lst[0]
+    m2 = lst[2]
+    d1 = lst[1]
+    d2 = lst[3]
 
-T = int(input()) # 첫번째 입력 ; 테스트 케이스의 개수
-
-for tc in range(1, T+1): #tc만큼 반복
-    lst = list(map(int, input().split()))
-    # [0], [2] -> 월
-    # [1], [3] -> 일
-    
-    if lst[0] == lst[2]:
-        result = lst[3] = lst[1]
-        
+    day = 0
+    if m1 == m2:
+        day = d2 - d1 + 1
     else:
-        day = 0
-        for mth in range(lst[0], lst[2]+1): #1월과 4월이면, 1,2,3,4
-            
-            # day += (month_day.find(mth) - lst[1])
-    
+        day = mth_day[m1] - d1 +1 + d2 #첫달 막달
+        for i in range(m1+1, m2): # 1월과 5월이면, 4, 0 1 2 3 4 
+           
+            day +=mth_day[i]
+    print(f'#{tc} {day}')
+
